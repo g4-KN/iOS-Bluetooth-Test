@@ -14,6 +14,8 @@
 		580F83AC1AE301A90094D26D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 580F83AB1AE301A90094D26D /* Images.xcassets */; };
 		580F83AF1AE301A90094D26D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 580F83AD1AE301A90094D26D /* LaunchScreen.xib */; };
 		580F83BB1AE301AA0094D26D /* Bluetooth_ScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 580F83BA1AE301AA0094D26D /* Bluetooth_ScannerTests.m */; };
+		580F83C51AE302BA0094D26D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 580F83C41AE302BA0094D26D /* CoreBluetooth.framework */; };
+		582EE3B21AE423DC0056EF4E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582EE3B11AE423DC0056EF4E /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		580F83B41AE301AA0094D26D /* Bluetooth ScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bluetooth ScannerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		580F83B91AE301AA0094D26D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		580F83BA1AE301AA0094D26D /* Bluetooth_ScannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bluetooth_ScannerTests.m; sourceTree = "<group>"; };
+		580F83C41AE302BA0094D26D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		582EE3B11AE423DC0056EF4E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582EE3B21AE423DC0056EF4E /* MessageUI.framework in Frameworks */,
+				580F83C51AE302BA0094D26D /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,8 @@
 		580F83921AE301A90094D26D = {
 			isa = PBXGroup;
 			children = (
+				582EE3B11AE423DC0056EF4E /* MessageUI.framework */,
+				580F83C41AE302BA0094D26D /* CoreBluetooth.framework */,
 				580F839D1AE301A90094D26D /* Bluetooth Scanner */,
 				580F83B71AE301AA0094D26D /* Bluetooth ScannerTests */,
 				580F839C1AE301A90094D26D /* Products */,
@@ -168,6 +176,7 @@
 				TargetAttributes = {
 					580F839A1AE301A90094D26D = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 2S3D8J8M3T;
 					};
 					580F83B31AE301AA0094D26D = {
 						CreatedOnToolsVersion = 6.2;
@@ -345,9 +354,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Bluetooth Scanner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -355,9 +367,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Bluetooth Scanner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -414,6 +429,7 @@
 				580F83C01AE301AA0094D26D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		580F83C11AE301AA0094D26D /* Build configuration list for PBXNativeTarget "Bluetooth ScannerTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +438,7 @@
 				580F83C31AE301AA0094D26D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
